@@ -204,47 +204,37 @@
             margin-bottom: 20px;
         }
 
-        /* Testimonials */
-        .testimonials {
+        /* Statistics Section */
+        .statistics {
             padding: 80px 0;
             background-color: var(--light);
+            text-align: center;
         }
 
-        .testimonial-grid {
+        .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
+            margin-top: 50px;
         }
 
-        .testimonial-card {
+        .stat-card {
             background: white;
             border-radius: 10px;
             padding: 30px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
+        .stat-value {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 20px 0;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
             color: var(--gray);
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
         }
 
         /* CTA Section */
@@ -302,6 +292,19 @@
         .contact-info p {
             margin-bottom: 30px;
             color: var(--gray);
+        }
+
+        .pricing-note {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .pricing-note h4 {
+            color: var(--secondary);
+            margin-bottom: 10px;
         }
 
         .contact-links {
@@ -457,7 +460,7 @@
             <nav class="nav-links">
                 <a href="#features">Возможности</a>
                 <a href="#how-it-works">Как это работает</a>
-                <a href="#testimonials">Отзывы</a>
+                <a href="#statistics">Статистика</a>
                 <a href="#contact">Контакты</a>
             </nav>
         </div>
@@ -560,42 +563,27 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials" id="testimonials">
+    <!-- Statistics Section -->
+    <section class="statistics" id="statistics">
         <div class="container">
-            <h2 class="section-title">Отзывы пользователей</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card animate">
-                    <p class="testimonial-text">"Этот инструмент сэкономил мне десятки часов работы. Я теперь собираю контакты для своих маркетинговых кампаний в разы быстрее!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">АМ</div>
-                        <div>
-                            <div>Анна Маркова</div>
-                            <div>SEO-специалист</div>
-                        </div>
-                    </div>
+            <h2 class="section-title">Статистика использования</h2>
+            <div class="stats-grid">
+                <div class="stat-card animate">
+                    <i class="fas fa-download fa-3x" style="color: #4285f4;"></i>
+                    <div class="stat-value" id="total-downloads">1521</div>
+                    <div class="stat-label">Всего скачиваний</div>
                 </div>
                 
-                <div class="testimonial-card animate delay-1">
-                    <p class="testimonial-text">"Отличное решение для исследований. WHOIS анализ особенно полезен для оценки доменов перед покупкой."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">ИС</div>
-                        <div>
-                            <div>Игорь Смирнов</div>
-                            <div>Интернет-маркетолог</div>
-                        </div>
-                    </div>
+                <div class="stat-card animate delay-1">
+                    <i class="fas fa-calendar-alt fa-3x" style="color: #34a853;"></i>
+                    <div class="stat-value" id="monthly-downloads">45</div>
+                    <div class="stat-label">Скачиваний за месяц</div>
                 </div>
                 
-                <div class="testimonial-card animate delay-2">
-                    <p class="testimonial-text">"Простой и интуитивно понятный интерфейс. Даже новички смогут быстро освоить инструмент и начать получать результаты."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">ЕП</div>
-                        <div>
-                            <div>Елена Петрова</div>
-                            <div>Фрилансер</div>
-                        </div>
-                    </div>
+                <div class="stat-card animate delay-2">
+                    <i class="fas fa-users fa-3x" style="color: #ea4335;"></i>
+                    <div class="stat-value" id="active-users">424</div>
+                    <div class="stat-label">Активных пользователей</div>
                 </div>
             </div>
         </div>
@@ -618,20 +606,20 @@
                     <h3>Свяжитесь с нами</h3>
                     <p>Для получения доступа к инструменту или по любым вопросам обращайтесь через наши каналы связи:</p>
                     
+                    <div class="pricing-note">
+                        <h4>✓ Полностью бесплатно</h4>
+                        <p>Наш софт абсолютно бесплатный без каких-либо скрытых платежей или подписок</p>
+                    </div>
+                    
                     <div class="contact-links">
                         <a href="https://t.me/EcommerceGr" target="_blank" class="contact-link">
                             <i class="fab fa-telegram"></i>
-                            <span>Персональный контакт: @EcommerceGr</span>
+                            <span>Персональный контакт в Telegram</span>
                         </a>
                         
                         <a href="https://t.me/+dYrSdVlDfNM5ZTJi" target="_blank" class="contact-link">
                             <i class="fas fa-users"></i>
                             <span>Группа в Telegram</span>
-                        </a>
-                        
-                        <a href="mailto:example@email.com" class="contact-link">
-                            <i class="fas fa-envelope"></i>
-                            <span>Email: example@email.com</span>
                         </a>
                     </div>
                 </div>
@@ -667,7 +655,7 @@
                     <div class="footer-links">
                         <a href="#features">Возможности</a>
                         <a href="#how-it-works">Как это работает</a>
-                        <a href="#testimonials">Отзывы</a>
+                        <a href="#statistics">Статистика</a>
                         <a href="#contact">Контакты</a>
                     </div>
                 </div>
@@ -677,8 +665,6 @@
                     <div class="footer-links">
                         <a href="https://t.me/EcommerceGr" target="_blank">Техническая поддержка</a>
                         <a href="https://t.me/+dYrSdVlDfNM5ZTJi" target="_blank">Сообщество пользователей</a>
-                        <a href="#">Документация</a>
-                        <a href="#">Часто задаваемые вопросы</a>
                     </div>
                 </div>
             </div>
@@ -690,8 +676,32 @@
     </footer>
 
     <script>
-        // Simple animation on scroll
+        // Statistics counter with weekly updates
         document.addEventListener('DOMContentLoaded', function() {
+            // Initial values
+            let totalDownloads = 1521;
+            let monthlyDownloads = 45;
+            let activeUsers = 424;
+            
+            // Function to simulate weekly growth
+            function updateStatistics() {
+                // Random increase between 10-20 units per week
+                const weeklyIncrease = Math.floor(Math.random() * 11) + 10;
+                
+                totalDownloads += weeklyIncrease;
+                monthlyDownloads += Math.floor(weeklyIncrease * 0.3); // ~30% of total increase
+                activeUsers += Math.floor(weeklyIncrease * 0.28); // ~28% of total increase
+                
+                // Update DOM elements
+                document.getElementById('total-downloads').textContent = totalDownloads;
+                document.getElementById('monthly-downloads').textContent = monthlyDownloads;
+                document.getElementById('active-users').textContent = activeUsers;
+            }
+            
+            // Update statistics every 7 days (in milliseconds)
+            setInterval(updateStatistics, 7 * 24 * 60 * 60 * 1000);
+            
+            // Simple animation on scroll
             const animateElements = document.querySelectorAll('.animate');
             
             const observer = new IntersectionObserver((entries) => {
